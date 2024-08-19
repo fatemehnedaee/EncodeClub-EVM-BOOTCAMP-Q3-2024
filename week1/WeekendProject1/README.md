@@ -7,7 +7,9 @@ Try running some of the following tasks:
 
 1. **success** Deployed `HelloWorld.sol` contract on Sepolia testnet
     1. > Txn Hash:  
-        > 0x8a11192dcae1dc30a6ba317c5b2e8031fe95481a8ab165a85343856bb9db9f81 
+        > 0x8a11192dcae1dc30a6ba317c5b2e8031fe95481a8ab165a85343856bb9db9f81   
+    2. > Contract Address:  
+        > 0x511AefbB15AE63d982c8836031e5a4DD1ba93717
         
 <br/>
 
