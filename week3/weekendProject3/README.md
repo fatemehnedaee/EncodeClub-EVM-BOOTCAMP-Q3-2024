@@ -11,7 +11,9 @@ In this contract, users gain voting power based on the number of tokens they hol
 Try running some of the following tasks:  
 
 ### 1. Deploy `MyToken.sol` contract on Sepolia testnet
-- > npx ts-node --files ./scripts/DeployTokenContract.ts
+-  ```bash
+   npx ts-node --files ./scripts/DeployTokenContract.ts
+   ```
 - [DeployTokenContract Script](https://github.com/fatemehnedaee/EncodeClub-EVM-BOOTCAMP-Q3-2024/blob/main/week3/weekendProject3/scripts/DeployTokenContract.ts)  
 - Txn Hash:  
    > 0x35a94655d34bb3a48b4d8391ad009cc1693f51ce22a431cca8b6f2cce9dfe9a8 
@@ -21,8 +23,10 @@ Try running some of the following tasks:
 <br/>
 
 ### 2. Deploy `TokenizedBallot.sol` contract on Sepolia testnet
-- > npx ts-node --files ./scripts/DeployTokenizedBallot.ts "tokenContractAddress" "proposal1" "proposal2" "proposal3"
-- [DeployTokenizedBallot Script](https://github.com/fatemehnedaee/EncodeClub-EVM-BOOTCAMP-Q3-2024/blob/main/week3/weekendProject3/scripts/DeployTokenizedBallot.ts)  
+- ```bash
+   npx ts-node --files ./scripts/DeployTokenizedBallot.ts "tokenContractAddress" "proposal1" "proposal2" "proposal3"
+   ```
+- [DeployTokenizedBallotContract Script](https://github.com/fatemehnedaee/EncodeClub-EVM-BOOTCAMP-Q3-2024/blob/main/week3/weekendProject3/scripts/DeployTokenizedBallotContract.ts)  
 - Txn Hash:  
    > 0x7052a103643049642fcf988ae32fcf9e9a32054fcee7c106844b9aa6506bb594 
 - Contract Address:  
@@ -40,7 +44,9 @@ Try running some of the following tasks:
 
 ### 3. Intract with `Mint` Script
 - Users with the MINTER_ROLE can mint token. Additional members with the MINTER_ROLE can be added after deployment using the token contract's functions; however, only individuals with the DEFAULT_ADMIN_ROLE have the authority to perform this action.
-- > npx ts-node --files ./scripts/Mint.ts "tokenContractAddress" "value"
+- ```bash
+   npx ts-node --files ./scripts/Mint.ts "tokenContractAddress" "value"
+   ```
 - [Mint Script](https://github.com/fatemehnedaee/EncodeClub-EVM-BOOTCAMP-Q3-2024/blob/main/week3/weekendProject3/scripts/Mint.ts)     
 - **Success**   
    - Txn Hash:    
@@ -50,7 +56,9 @@ Try running some of the following tasks:
 
 ### 4. Intract with `SelfDelegate` Script
 - After mint token, You should delegate yourself then you will have vote power.
-- > npx ts-node --files ./scripts/SelfDelegate.ts "tokenContractAddress" "delegateAddress"  
+- ```bash
+   npx ts-node --files ./scripts/SelfDelegate.ts "tokenContractAddress" "delegateAddress"  
+   ```
 - [SelfDelegate Script](https://github.com/fatemehnedaee/EncodeClub-EVM-BOOTCAMP-Q3-2024/blob/main/week3/weekendProject3/scripts/SelfDelegate.ts)     
 - **Success**   
    - Txn Hash:    
@@ -60,7 +68,9 @@ Try running some of the following tasks:
 
 ### 5. Intract with `GetVotePower` Script
 - Returns the amount of votes that account had at a specific moment in the past.
-- > npx ts-node --files ./scripts/GetVotePower.ts "tokenizedBallotcontractAddress" "voterAddress"  
+- ```bash
+   npx ts-node --files ./scripts/GetVotePower.ts "tokenizedBallotcontractAddress" "voterAddress"  
+   ```
 - [GetVotePower Script](https://github.com/fatemehnedaee/EncodeClub-EVM-BOOTCAMP-Q3-2024/blob/main/week3/weekendProject3/scripts/GetVotePower.ts)     
 - **Success** 
    > This address 0x249A892aDdB354E07F7F308275dFc1faae9707CB has 500 vote power.   
@@ -69,7 +79,9 @@ Try running some of the following tasks:
 
 ### 6. Intract with `CastVote` Script
 - Only voters who have been given voting rights can cast vote, based on the target block number.
-- > npx ts-node --files ./scripts/CastVote.ts "tokenizedBallotcontractAddress" "proposalIndex" "voteCount"
+- ```bash
+   npx ts-node --files ./scripts/CastVote.ts "tokenizedBallotcontractAddress" "proposalIndex" "voteCount"
+   ```
 - [CastVote Script](https://github.com/fatemehnedaee/EncodeClub-EVM-BOOTCAMP-Q3-2024/blob/main/week3/weekendProject3/scripts/CastVote.ts)
 - **Success**   
    - Txn Hash:    
@@ -79,7 +91,9 @@ Try running some of the following tasks:
 
 ### 7. Intract with `QueryResult` Script
 - Return the winner proposal  
-- > npx ts-node --files ./scripts/QueryResult.ts "tokenizedBallotcontractAddress"
+- ```bash
+   npx ts-node --files ./scripts/QueryResult.ts "tokenizedBallotcontractAddress"
+   ```
 - [QueryResult Script](https://github.com/fatemehnedaee/EncodeClub-EVM-BOOTCAMP-Q3-2024/blob/main/week3/weekendProject3/scripts/QueryResult.ts) 
 - **Success** 
    > Proposal 3: syncswap is winner with 50 vote count.        
