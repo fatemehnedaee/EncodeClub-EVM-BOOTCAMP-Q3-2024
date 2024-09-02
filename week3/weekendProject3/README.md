@@ -45,7 +45,7 @@ Try running some of the following tasks:
 ### 3. Intract with `Mint` Script
 - Users with the MINTER_ROLE can mint token. Additional members with the MINTER_ROLE can be added after deployment using the token contract's functions; however, only individuals with the DEFAULT_ADMIN_ROLE have the authority to perform this action.
 - ```bash
-   npx ts-node --files ./scripts/Mint.ts "tokenContractAddress" "value"
+   npx ts-node --files ./scripts/Mint.ts "tokenContractAddress" "minterAddress" "value"
    ```
 - [Mint Script](https://github.com/fatemehnedaee/EncodeClub-EVM-BOOTCAMP-Q3-2024/blob/main/week3/weekendProject3/scripts/Mint.ts)     
 - **Success**   

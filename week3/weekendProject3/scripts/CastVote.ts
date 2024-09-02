@@ -23,7 +23,7 @@ async function main() {
         throw new Error("Invalid proposal index");
     const voteCount = parameters[2];
     if (isNaN(Number(voteCount))) 
-        throw new Error("Invalid value");
+        throw new Error("Invalid vote count");
 
 
     // Attach the contract and check the selected option
@@ -60,8 +60,12 @@ async function main() {
             console.log("Transaction hash:", hash);
             console.log("Waiting for confirmations...");
             const receipt = await publicClient.waitForTransactionReceipt({ hash });
-            console.log("Transaction confirmed");
-            console.log(`${voter.account.address} voted ${voteCount} to ${name}`);
+            if (receipt.status) {
+                console.log("Transaction confirm");
+                console.log(`${voter.account.address} voted ${voteCount} to ${name}`)
+            } else {
+                console.log("Transaction fail");
+            }
         } else {
             console.log("Operation cancelled");
         }

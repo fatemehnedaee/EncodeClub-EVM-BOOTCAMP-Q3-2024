@@ -35,7 +35,7 @@ async function main() {
     console.log("Last block number:", blockNumber);
 
     // Intract with deployed contract and mint token
-    console.log(`Mint ${parseEther(value.toString())} MTK to ${minterAddress}`)
+    console.log(`Mint ${value.toString()} MTK to ${minterAddress}`)
     const account = privateKeyToAccount(`0x${deployerPrivateKey}`);
     const minter = createWalletClient({
         account,
@@ -46,7 +46,7 @@ async function main() {
         address: tokenContractAddress,
         abi,
         functionName: "mint",
-        args: [minterAddress, parseEther(value.toString())],
+        args: [minterAddress, value.toString()],
     });
 
     // Get receipt transaction with a public client
