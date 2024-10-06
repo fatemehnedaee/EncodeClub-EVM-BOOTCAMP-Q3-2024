@@ -1,0 +1,20 @@
+{
+  "name": "project3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "- Complete the contracts together - Develop and run scripts for “TokenizedBallot.sol” within your group to give voting tokens, delegating voting power, casting votes, checking vote power and querying results - Write a report with each function execution and the transaction hash, if successful, or the revert reason, if failed - Submit your weekend project by filling the form provided in Discord - Share your code in a github repo in the submission form",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox-viem": "^3.0.0",
+    "@openzeppelin/contracts": "^5.0.2",
+    "hardhat": "^2.22.10",
+    "random-words": "^1.3.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5"
+  }
+}
